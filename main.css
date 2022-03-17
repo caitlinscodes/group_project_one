@@ -1,0 +1,28 @@
+.jumbotron { 
+    border: 10px solid black;
+    background-color: azure;
+    
+
+}
+
+#form {
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+
+}
+
+body {
+    background-color: midnightblue;
+}
+main {
+    display: flex;
+    /* flex-flow: column wrap; */
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    padding: 10px;
+    border: 10px solid black;
+    margin: 100px;
+}
