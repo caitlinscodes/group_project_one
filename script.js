@@ -1,6 +1,7 @@
 
 let sbmtBttn = document.getElementById('sbmtBttn')
 
+// prompt("Are you 21 and up?")
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
