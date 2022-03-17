@@ -1,10 +1,10 @@
 
-
+let sbmtBttn = document.getElementById('sbmtBttn')
 
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail';
+    var requestUrl = '';
   
     fetch(requestUrl)
       .then(function (response) {
@@ -17,5 +17,5 @@ function getApi() {
       });
   }
   
-  addEventListener('click', getApi);
+  sbmtBttn.addEventListener('click', getApi);
   
