@@ -51,10 +51,25 @@ function getApi(e) {
   }
   
   sbmtBttn.addEventListener('click', getApi);
+
+//------------------code section to pull API for second page/cocktails-------
+// fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita&api_key=1")
+//   .then(function(response){
+//     return response.json()
+//   })
+//   .then( function(data){
+//     console.log(data)
+//   })
+//   .catch(function(error){
+//     console.log(error)
+//   });
+
+
+
   
 
 
-
+//-----code template to pull from API-----
 // function getApi(){
 //         var requestUrl = 'http://openlibrary.org/search.json?subject=mystery+thriller';
 
