@@ -1,4 +1,7 @@
 console.log("linked");
+
+let bookGenre = $("#format-input").value;
+console.log(bookGenre);
 fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=scotch")
   .then(function(response){
     return response.json()
