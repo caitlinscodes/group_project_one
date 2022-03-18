@@ -2,18 +2,22 @@ let sbmtBttn = document.getElementById('bookBttn')
 
 // prompt("Are you 21 and up?")
 
-const ageBttn = document.getElementById('sbmtBttn')
+const ageBttn = document.getElementById('ageBttn')
 const introCard = document.getElementById('introCard')
 const selectionBox = document.getElementById('selectionBox')
 const radioButtons = document.querySelectorAll('input[name="question"]');
 
-function change(){
-    if (radioButtons.change){
-        ageBttn.removeAttribute('disabled')
-    }
+function askAge(radioInput){
+    //If the checkbox has been checked
+    if(radioInput.checked){
+        //Set the disabled property to FALSE and enable the button.
+        ageBttn.disabled = false;
+    }// else{
+    //     //Otherwise, disable the submit button.
+    //     ageBttn.disabled = true;
+    // }
 }
-
-change()
+// change()
 
 ageBttn.addEventListener('click', () => {
   introCard.setAttribute('style', 'display:none');
