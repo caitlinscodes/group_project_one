@@ -2,15 +2,8 @@
   border: 10px solid black;
   background-color: azure;
   
-
 }
 
-/* #form {
-  display: flex;
-  flex-flow: column;
-  width: fit-content;
-
-} */
 
 body {
   background-color: midnightblue;
@@ -31,32 +24,3 @@ aside {
   border: 10px solid black;
   background-color: azure;
 }
-
-section {
-  display: inline-block;
-  border: 10px solid black;
-  background-color: azure;
-}
-
-/* #introBox {
-  position: relative;
-}
-
-#selectionBox {
-  position: absolute;
-  visibility: hidden;
-  margin-top: 300px;
-}
-
-#ageReq {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-   align-items: center;
-  justify-content: space-around;  
-   margin: 10px;
-
-} */
-/* #sbmt {
-margin: 10px;  
-} */
