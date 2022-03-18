@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="jumbotron">
             <!-- <form method="POST" id="form">
                
@@ -31,46 +31,61 @@
 
 
     <main>
-        <div id="introCard">
-
-
-
-        </div>
-        
-        
-        
-        
-        
-        <div class="card">
-            
-                <!-- <form action="">
-                    <input required type="radio" name="checkAge" id="checkAge">
-                    <label for="checkAge">Are you 21 and up?</label>
-                    <br>
-                    <input required type="radio" name="checkAge" id="checkAge">
-                    <label for="checkAge">Are you under 21?</label>
-                    <!-- <button type="submit">Click Me</button> -->
-                <!-- </form> -->
-             
+        <div id="introCard" class="card">
+            <div class="card-body">
+                
+                <ul>
+                    <li>
+                        Welcome! You're about to take a Time Quiz over JavaScript!
+                    </li>
+                    <li>
+                        Everytime you get an answer wrong , you will lose 30sec of your time.
+                    </li>
+                    <li>
+                        Click the Start Button to begin and Goodluck!!
+                    </li>
+                </ul>
+                <form id="ageReq">
+                   <input required type="radio"  name="question" id="checkAge">
+                   <label for="checkAge">Are you 21 and up?</label>
+                   
+                   <input required type="radio" name="question" id="checkAge">
+                   <label for="checkAge">Are you under 21?</label>
+                   
+                   <input type="submit" id="sbmtBttn" value="Submit"></input> 
                   
+               </form>
+              
+    
+            </div>
+
+        </div> 
+        
+                
+        
+        
+        
+        
+        <div id="selectionBox" class="card">
+                <div class="card-body">
+                        
             
 
-                 <form id="search-form" class="form w-100">
-                     <h2>Select your book genre</h2>
+                        <form id="search-form" class="form w-100">
+                            <h2>Select your book genre</h2>
         
-                    <select id="format-input" class="form-input w-100">
+                            <select id="format-input" class="form-input w-100">
                     <option value="" disabled selected>Select a format...</option>
                     <option value="maps">Romance</option>
                     <option value="audio">Mystery</option>
                     <option value="photos">Fantasy</option>
                     <option value="manuscripts">Beach-Read</option>
                     </select>
-                    <button id="bttn" class="btn btn-info btn-block">Click Me</button>
+                    <button id="bookBttn" class="btn btn-info btn-block">Click Me</button>
                  </form>
             
-            
-            
-            
+                </div>
+                <div id="book-title" class="jumbotron"> </div>
         </div>
     </main>
     

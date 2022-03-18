@@ -1,22 +1,15 @@
 
-let sbmtBttn = document.getElementById('sbmtBttn')
+const ageBttn = document.getElementById('sbmtBttn')
+const introCard = document.getElementById('introCard')
+const selectionBox = document.getElementById('selectionBox')
 
-// prompt("Are you 21 and up?")
+// var now = confirm("Yes")
 
-function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = '';
+
+
+ageBttn.addEventListener('click', () => {
+  introCard.setAttribute('style', 'display:none');
+  selectionBox.setAttribute('style', 'visibility:visible');
+  // document.getElementsByName('questoion')[0].focus;
   
-    fetch(requestUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data)
-   
-        
-      });
-  }
-  
-  sbmtBttn.addEventListener('click', getApi);
-  
+});
