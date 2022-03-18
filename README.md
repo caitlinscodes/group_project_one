@@ -8,6 +8,10 @@ We utilized HTML and CSS to create the wireframes and the majority of the stylin
 
 ## Team Members
 
+* Mike Blackson
+* Jasmine Bolds
+* Caitlin Stevenson
+* Gustavo Tijerino
 
 ## Screenshot of Final Page
 
