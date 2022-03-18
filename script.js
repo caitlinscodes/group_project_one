@@ -1,4 +1,3 @@
-
 let sbmtBttn = document.getElementById('bookBttn')
 
 // prompt("Are you 21 and up?")
