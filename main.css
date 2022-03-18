@@ -24,5 +24,27 @@ main {
 .card {
     padding: 10px;
     border: 10px solid black;
-    margin: 100px;
+    /* margin: 100px; */
 }
+
+#introBox {
+    position: relative;
+}
+
+#selectionBox {
+    position: absolute;
+    visibility: hidden;
+    margin-top: 200px;
+}
+
+#ageReq {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+     align-items: center;
+    justify-content: space-around;  
+     margin: 10px;
+}
+/* #sbmt {
+ margin: 10px;  
+} */

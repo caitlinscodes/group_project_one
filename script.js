@@ -1,9 +1,22 @@
 
-let sbmtBttn = document.getElementById('bttn')
+let sbmtBttn = document.getElementById('bookBttn')
 
 // prompt("Are you 21 and up?")
 
+const ageBttn = document.getElementById('sbmtBttn')
+const introCard = document.getElementById('introCard')
+const selectionBox = document.getElementById('selectionBox')
 
+// var now = confirm("Yes")
+
+
+
+ageBttn.addEventListener('click', () => {
+  introCard.setAttribute('style', 'display:none');
+  selectionBox.setAttribute('style', 'visibility:visible');
+  // document.getElementsByName('questoion')[0].focus;
+  
+});
 
 function getApi(e) {
 
@@ -40,6 +53,7 @@ function getApi(e) {
   
   sbmtBttn.addEventListener('click', getApi);
   
+
 
 
 // function getApi(){
