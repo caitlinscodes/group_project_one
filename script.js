@@ -1,4 +1,5 @@
 let sbmtBttn = document.getElementById('bookBttn')
+let bookGenre = document.getElementById("format-input").value;
 
 // prompt("Are you 21 and up?")
 
@@ -55,10 +56,10 @@ function getApi(e) {
           bookTitle.appendChild(listItem)
         }
    
-        
+        console.log(bookGenre);
       });
   }
-  
+  console.log(bookGenre);
   sbmtBttn.addEventListener('click', getApi);
 
 //------------------code section to pull API for second page/cocktails-------
