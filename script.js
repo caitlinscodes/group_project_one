@@ -5,10 +5,15 @@ let sbmtBttn = document.getElementById('bookBttn')
 const ageBttn = document.getElementById('sbmtBttn')
 const introCard = document.getElementById('introCard')
 const selectionBox = document.getElementById('selectionBox')
+const radioButtons = document.querySelectorAll('input[name="question"]');
 
-// var now = confirm("Yes")
+function change(){
+    if (radioButtons.change){
+        ageBttn.removeAttribute('disabled')
+    }
+}
 
-
+change()
 
 ageBttn.addEventListener('click', () => {
   introCard.setAttribute('style', 'display:none');
