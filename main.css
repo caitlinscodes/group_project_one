@@ -5,7 +5,9 @@
     
 
 }
-
+img {
+    background-image: cover;
+}
 #form {
     display: flex;
     flex-flow: column;
