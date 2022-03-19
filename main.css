@@ -1,22 +1,28 @@
 
 .jumbotron { 
-    border: 10px solid black;
+    border-bottom: 10px solid #E09F3E;
     background-color: azure;
-    
+    background-image: url(image/book.png);
+    background-image: cover; 
+}
 
+form label {
+    padding-top: 5px;
 }
-img {
-    background-image: cover;
+marquee {
+    color: white;
 }
+body {
+    background-color: #540B0E;
+}
+
 #form {
     display: flex;
     flex-flow: column;
     width: fit-content;
-
 }
-
-body {
-    background-color: midnightblue;
+form label {
+    color: white;
 }
 main {
     display: flex;
@@ -26,7 +32,7 @@ main {
 }
 .card {
     padding: 10px;
-    border: 10px solid black;
+    border: 10px solid #E09F3E;
     /* margin: 100px; */
 }
 
