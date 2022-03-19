@@ -1,11 +1,4 @@
 let sbmtBttn = document.getElementById('bookBttn')
-<<<<<<< HEAD
-let bookGenre = document.getElementById("format-input").value;
-
-// prompt("Are you 21 and up?")
-
-=======
->>>>>>> c716ea4b902aadafd10a39043ec4838e9848d42f
 const ageBttn = document.getElementById('ageBttn')
 const introCard = document.getElementById('introCard')
 const selectionBox = document.getElementById('selectionBox')
