@@ -1,75 +1,105 @@
-let sbmtBttn = document.getElementById('bookBttn')
+// let sbmtBttn = document.getElementById('bookBttn')
 const ageBttn = document.getElementById('ageBttn')
 const introCard = document.getElementById('introCard')
 const selectionBox = document.getElementById('selectionBox')
 const radioButtons = document.querySelectorAll('input[name="question"]');
 
 function askAge(radioInput){
-    if(radioInput.checked){
-     
-        ageBttn.disabled = false;
-    }
+  if(radioInput.checked){
+    
+    ageBttn.disabled = false;
+  }
 }
 
 
 ageBttn.addEventListener('click', () => {
-  introCard.setAttribute('style', 'display:none');
-  selectionBox.setAttribute('style', 'visibility:visible');
-  // document.getElementsByName('questoion')[0].focus;
+  // introCard.setAttribute('style', 'display:none');
+  // selectionBox.setAttribute('style', 'visibility:visible');
+window.location.assign('index2.html');
+  // genreSubmitted()
   
 });
 
-function getApi(e) {
+// function genreSubmitted(event) {
+//   // event.preventDefault();
 
-  e.preventDefault()
+//   let formatInput = document.querySelector('#format-input').value
+  
+//   if (!formatInput) {
+//    alert('You need to pick Genre!');
+//     return;
+    
+ 
+//   // getApi()
+// }
 
-  var selectInput = document.getElementById("format-input").value;
+// sbmtBttn.addEventListener('click', genreSubmitted);
 
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'http://openlibrary.org/search.json?subject=' + selectInput;
-  console.log('requestUrl',requestUrl)
-    fetch(requestUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (!window.location.href.includes("/index2.html")) {
-            window.open("index2.html", "_parent")
-            return data
-        } 
-        var bookTitle= document.getElementById("book-title");
-       
 
-        for(var i = 0; i< 15; i++){
-          console.log('title',data.docs[i].title)
 
-         
-          var listItem = document.createElement('li');
-          listItem.textContent = data.docs[i].title;
-          console.log(listItem)
-          bookTitle.appendChild(listItem)
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getApi(e) {
+  
+//   e.preventDefault()
    
-        
-      });
-  }
+//   // var selectInput = document.getElementById("format-input").value;
   
-  sbmtBttn.addEventListener('click', getApi);
-  
-
-
-
-// function getApi(){
-//         var requestUrl = 'http://openlibrary.org/search.json?subject=mystery+thriller';
-
-//         fetch(requestUrl)
+//   // fetch request gets a list of all the repos for the node.js organization
+//   var requestUrl = 'http://openlibrary.org/search.json?subject=' + formatInput;
+//   console.log('requestUrl',requestUrl)
+//     fetch(requestUrl)
 //     .then(function (response) {
 //       return response.json();
 //     })
-//     .then(function (data) {
-//       console.log(data);
-//     })
-// }
+//       .then(function (data) {
+//         if (window.location.assign("/index2.html")) {
+        
+//           return data
+//         } 
+//       }).then( data => {
+//         var bookTitle= document.getElementById("book-title");
 
-// libBt.eventListener("click", getApi);
-// console.log('');
+//         let bookName = data.docs.title
+
+//        bookName.forEach(book => {
+//          console.log(book);
+
+        // let list = document.createElement('li')
+
+
+
+        
+  //       })
+        
+        
+  //       // for(var i = 0; i< 15; i++){
+  //       //   console.log('title',data.docs[i].title)
+          
+          
+  //       //   var listItem = document.createElement('li');
+  //       //   listItem.textContent = data.docs[i].title;
+  //       //   console.log(listItem)
+  //       //   bookTitle.appendChild(listItem)
+  //       // }
+        
+        
+  //     });
+  // }
+  
+  // sbmtBttn.addEventListener('click', getApi);
+  
+  
+  
+  
