@@ -1,5 +1,5 @@
 let sbmtBttn = document.getElementById('bookBttn')
-var bookTitle= document.getElementById("book-title");
+var bookBox= document.getElementById("book-title");
 
 
 let results = []
@@ -24,20 +24,23 @@ function getApi(e) {
         return response.json();
       })
       .then(function (data) {
+        console.log(data);
       
-         
+        //  let nameOfBook = data.docs.title[0]
        
 
-        for(var i = 0; i< 1; i++){
-          console.log('title',data.docs[i].title)
+        nameOfBook.forEach(nameOfBook  => {
+          
+        
+        
+         var listItem = document.createElement('li');
+         listItem.textContent = nameOfBook;
+         listItem.setAttribute('style', 'color:white');
+         console.log(listItem)
+         bookBox.appendChild(listItem)
+       })
+          
 
-         
-          var listItem = document.createElement('li');
-          listItem.textContent = data.docs[i].title;
-          listItem.setAttribute('style', 'color:white');
-          console.log(listItem)
-          bookTitle.appendChild(listItem)
-        }
    
         
     });
@@ -45,16 +48,12 @@ function getApi(e) {
 
 
 function reset(){
-    bookTitle.innerText = ''
+    bookBox.innerText = ''
   }
   
   sbmtBttn.addEventListener('click', function(event){
       event.preventDefault()
-    localStorage.setItem("potato", JSON.stringify(results) || []);
-  
-  var getHistory = JSON.parse(localStorage.getItem("potato"));
-  bookTitle.textContent = getHistory;
-  
+
 
       getApi()
       reset()
