@@ -1,15 +1,12 @@
-// console.log("linked");
-
-// let bookGenre = document.getElementById("format-input").value;
-// console.log(bookGenre);
 
 
 //pull genre from local storage
 var bookGenre = localStorage.getItem('genre');
+var selectInput = localStorage.getItem('selectInput')
 console.log(bookGenre);
 
 //pull book API
-var requestUrl = 'http://openlibrary.org/search.json?subject=' + selectInput;
+var requestUrl = 'http://openlibrary.org/search.json?subject=' + bookGenre;
 console.log('requestUrl',requestUrl)
   fetch(requestUrl)
     .then(function (response) {
@@ -18,11 +15,6 @@ console.log('requestUrl',requestUrl)
     .then(function (data) {
       localStorage.setItem('genre',selectInput);
      
-      if (!window.location.href.includes("/index2.html")) {
-        window.open("index2.html", "_parent")
-          return data
-        } 
-        
         var bookTitle= document.getElementById("book-title");
         
         
@@ -32,7 +24,7 @@ console.log('requestUrl',requestUrl)
           var listItem = document.createElement('li');
           listItem.textContent = data.docs[i].title;
           console.log(listItem)
-          bookResult.appendChild(listItem)
+          bookTitle.appendChild(listItem)
         }
         
     });
