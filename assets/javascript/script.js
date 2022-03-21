@@ -25,6 +25,8 @@ function getApi(e) {
 
   var selectInput = document.getElementById("format-input").value;
 
+  localStorage.setItem('selectInput', selectInput);
+
     // fetch request gets a list of all the repos for the node.js organization
     var requestUrl = 'http://openlibrary.org/search.json?subject=' + selectInput;
   console.log('requestUrl',requestUrl)
@@ -33,43 +35,26 @@ function getApi(e) {
         return response.json();
       })
       .then(function (data) {
-        if (!window.location.href.includes("/index2.html")) {
-            window.open("index2.html", "_parent")
-            return data
-        } 
-        var bookTitle= document.getElementById("book-title");
+        localStorage.setItem('genre',selectInput);
        
-
-        for(var i = 0; i< 15; i++){
-          console.log('title',data.docs[i].title)
-
-         
-          var listItem = document.createElement('li');
-          listItem.textContent = data.docs[i].title;
-          console.log(listItem)
-          bookTitle.appendChild(listItem)
-        }
-   
-        
+        if (!window.location.href.includes("/index2.html")) {
+          window.open("index2.html", "_parent")
+            return data
+          } 
+          
+          var bookTitle= document.getElementById("book-title");
+          
+          
+          for(var i = 0; i< 15; i++){
+            console.log('title',data.docs[i].title)
+            
+            var listItem = document.createElement('li');
+            listItem.textContent = data.docs[i].title;
+            console.log(listItem)
+            bookTitle.appendChild(listItem)
+          }
+          
       });
   }
-  
-  sbmtBttn.addEventListener('click', getApi);
-  
 
-
-
-// function getApi(){
-//         var requestUrl = 'http://openlibrary.org/search.json?subject=mystery+thriller';
-
-//         fetch(requestUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data);
-//     })
-// }
-
-// libBt.eventListener("click", getApi);
-// console.log('');
+  bookBttn.addEventListener('click', getApi);
