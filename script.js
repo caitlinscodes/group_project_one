@@ -26,35 +26,38 @@ function getApi(e) {
   var selectInput = document.getElementById("format-input").value;
 
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'http://openlibrary.org/search.json?subject=' + selectInput;
-  console.log('requestUrl',requestUrl)
-    fetch(requestUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (!window.location.href.includes("/index2.html")) {
-            window.open("index2.html", "_parent")
-            return data
-        } 
-        var bookTitle= document.getElementById("book-title");
+  //   var requestUrl = 'http://openlibrary.org/search.json?subject=' + selectInput;
+  // console.log('requestUrl',requestUrl)
+  //   fetch(requestUrl)
+  //     .then(function (response) {
+  //       return response.json();
+  //     })
+  //     .then(function (data) {
+  //       localStorage.setItem('genre',selectInput);
        
+  //       if (!window.location.href.includes("/index2.html")) {
+  //         window.open("index2.html", "_parent")
+  //           return data
+  //         } 
+          
+  //         var bookTitle= document.getElementById("book-title");
+          
+          
+  //         for(var i = 0; i< 15; i++){
+  //           console.log('title',data.docs[i].title)
+            
+  //           var listItem = document.createElement('li');
+  //           listItem.textContent = data.docs[i].title;
+  //           console.log(listItem)
+  //           bookTitle.appendChild(listItem)
+  //         }
+          
+  //     });
+  // }
 
-        for(var i = 0; i< 15; i++){
-          console.log('title',data.docs[i].title)
+  bookBttn.addEventListener('click', getApi);
 
-         
-          var listItem = document.createElement('li');
-          listItem.textContent = data.docs[i].title;
-          console.log(listItem)
-          bookTitle.appendChild(listItem)
-        }
-   
-        console.log(bookGenre);
-      });
-  }
-  console.log(bookGenre);
-  sbmtBttn.addEventListener('click', getApi);
+
 
 //------------------code section to pull API for second page/cocktails-------
 // fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita&api_key=1")
@@ -69,11 +72,7 @@ function getApi(e) {
 //   });
 
 
-
-  
-
-
-//-----code template to pull from API-----
+//-----code template to pull books from API-----
 // function getApi(){
 //         var requestUrl = 'http://openlibrary.org/search.json?subject=mystery+thriller';
 
