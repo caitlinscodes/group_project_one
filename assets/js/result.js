@@ -2,51 +2,62 @@ let sbmtBttn = document.getElementById('bookBttn')
 var bookBox= document.getElementById("book-title");
 var drinkTitle= document.getElementById("cocktail-name");
 
-
-let results = []
-
-
-
-
-
-
 function getApi() {
+  
+  const selectInput = document.getElementById("format-input").value;
+  
+  if (!selectInput) {
+        
+    alert('You need to pick Genre!')
+    
+  }   else {
+    
+  }
 
   
-
-  var selectInput = document.getElementById("format-input").value;
-
-    // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'http://openlibrary.org/search.json?subject='+ selectInput;
+  // fetch request gets a list of all the repos for the node.js organization
+  var requestUrl = 'http://openlibrary.org/search.json?subject='+ selectInput;
   console.log('requestUrl',requestUrl)
-    fetch(requestUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
+  fetch(requestUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
      
-      for(let i = 0; i <= 0; i++ ){
+    for(let i = 0; i <= 0; i++ ){
         let allTheBooks = data.docs[i].title
         
-
-        // console.log(allTheBooks);
+        
+        //  Math.floor(Math.random() * (all + 1) + min);
+        
         
          var listItem = document.createElement('li');
          listItem.textContent = allTheBooks;
          listItem.setAttribute('style', 'color:white');
          console.log(listItem)
          bookBox.appendChild(listItem)
-        
-      }
-        
-    });
-}
-
+         
+         localStorage.setItem("notPotato", JSON.stringify(allTheBooks))
+        }
+      });
+    }
+  
+    
 function getApi2(){
+  const cocktailInput = document.getElementById("cocktail-input").value
 
-fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=scotch")
-  .then(function(response){
-    return response.json()
+  
+  if (!cocktailInput) {
+        
+    alert('You need to pick Cocktail Base!')
+    
+  }   
+
+
+  
+fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + cocktailInput)
+  .then(function(choice){
+    return choice.json();
   })
   .then( function(data){
     console.log(data)
@@ -61,11 +72,14 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=scotch")
       let drinkList = document.createElement('li');
       drinkList.textContent = allDrinks
      drinkList.setAttribute('style', 'color:white');
-      drinkTitle.appendChild(drinkList)
+     drinkTitle.appendChild(drinkList)
+
+      localStorage.setItem("notPotato2", JSON.stringify(allDrinks))
     }
     
   })
 }
+
 function reset(){
     bookBox.innerText = ''
     drinkTitle.innerText = ''
@@ -73,11 +87,27 @@ function reset(){
   
   sbmtBttn.addEventListener('click', function(event){
       event.preventDefault()
-
-
+      
+      
       getApi()
       getApi2()
       reset()
       
+      // if (!selectInput || !cocktailInput) {
+        
+      //   alert('You need to pick Genre!');
+      
+      // }  
+      
     })
 
+    function storage(){
+
+      document.getElementById('result-history')
+
+
+
+
+
+
+    }
