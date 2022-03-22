@@ -2,10 +2,14 @@
 .jumbotron { 
     border-bottom: 10px solid #E09F3E;
     background-color: azure;
-    background-image: url("../image/book.png");
+    background-image: url(../image/book.png);
     background-image: cover; 
 }
 
+aside h2 {
+
+    color: azure;
+}
 form label {
     padding-top: 5px;
 }
@@ -40,11 +44,6 @@ main {
     position: relative;
 }
 
-#selectionBox {
-    position: absolute;
-    visibility: hidden;
-    margin-top: 300px;
-}
 
 #ageReq {
     display: flex;
@@ -55,7 +54,3 @@ main {
      margin: 10px;
 
 }
-
-/* #ageBttn {
-    display: ;
-} */
