@@ -12,19 +12,20 @@
 <body>
     <header class="jumbo">
         <div class="jumbotron">
-            <form method="POST" id="form">
-               
-                  <label for="email">Email</label>
-                  
-                  <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
-                                
-               
-                  <label for="password">Password</label>
-                  
-                  <input type="password" name="password" id="password" placeholder="supersecure123" />
+            <form id="form">
+                <h2>Register</h2>
+                <p id="thank-you-msg"></p>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="AwesomeSauce22" /> 
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="janedoe@mail.com" />           
+             
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="supersecure123" />
                 
-                <button id="sign-up">Sign Up</button>
-              </form>
+              <button id="sign-up">Sign Up</button>
+          </form>
                 <marquee behavior="alternate" scrollamount="15" direction=""><h1>BuzzWordz</h1></marquee>
         </div>
     </header>
@@ -49,11 +50,11 @@
                     </li>
                 </ul>
                 <div id="ageReq">
-                    <h3>Are you 21 and up?</h3>
+                    <h3>Are you 21+ ?</h3>
                    <input required type="radio"  name="question" id="checkAge" onclick="askAge(this)">
                    <label for="checkAge">Yes</label> 
                    
-                   <input required type="radio" name="question" id="checkAge" onclick="askAge(this)">
+                   <input required type="radio" name="question" id="noCheckAge" onclick="askAge(this)" >
                    <label for="checkAge">No</label>
                    
                    <input type="submit" id="ageBttn" value="Submit" disabled></input> 

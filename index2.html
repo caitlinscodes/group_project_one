@@ -12,7 +12,8 @@
 <body>
   <header id="header">
     <div class="jumbotron">
-            <marquee behavior="alternate" scrollamount="15" direction=""><h1>Your Buzzword Pairing is...</h1></marquee>
+      <h1 id="welcomeUser"></h1>
+            <marquee behavior="alternate" scrollamount="15" direction=""><h1>Your BuzzWordz Pairing is...</h1></marquee>
     </div>
 </header>
     <main class="row-12">
@@ -41,9 +42,11 @@
   <br>
         <!-- Pull past results from local storage -->
         <h2>Previous Results:</h2>
-          <ul id="result-history">
+        <div>
+          <ul id="resultHistory">
             <!-- Show result history -->
           </ul>
+        </div>
       </aside>
       <section class="current-results col-8">
         <div id="bookResult" class="card">
@@ -63,7 +66,7 @@
     
     
     <button> 
-    <a href="./index.html">Try Again! </a>
+    <a href="./index.html">Back to Home you Drunk! </a>
   </button>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
