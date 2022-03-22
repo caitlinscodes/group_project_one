@@ -26,7 +26,7 @@ form label {
     border-bottom: 10px solid #E09F3E;
     background-color: var(--detail);
     background-image: url(../image/book.png);
-    background-image: cover; 
+    background-size: cover;
 }
 
 aside h2 {
