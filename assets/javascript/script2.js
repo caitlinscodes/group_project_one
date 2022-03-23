@@ -32,7 +32,7 @@ function getApi() {
   }
 
     // calls Book Api
-  var requestUrl = 'http://openlibrary.org/search.json?subject='+ selectInput;
+  var requestUrl = 'https://openlibrary.org/search.json?subject='+ selectInput;
   console.log('requestUrl',requestUrl)
   fetch(requestUrl)
   .then(function (response) {
